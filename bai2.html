@@ -1,0 +1,76 @@
+<html>
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- jquery -->
+      <title>Student</title>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    </head>
+    <body>
+        <table border="1" id="table">
+        <tr style="text-align:left;">
+            <th style="width: 10%;">ID</th>
+            <th style="width: 30%;">Name</th>
+            <th style="width: 50%;">Group</th>
+            <th style="width: 10%;">Action</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Son Vu</td>
+            <td>Tu Dai Ac Nhon</td>
+            <td>
+                <button class="btn-show" >Show</button>
+            </td>
+        </tr>
+        <tr >
+            <td>2</td>
+            <td>Nhan Hoang</td>
+            <td>Tu Dai Ac Nhon</td>
+            <td>
+                <button class="btn-show" >Show</button>
+            </td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Anh Le</td>
+            <td>Tam Ninh Huyen Thoai</td>
+            <td>
+                <button class="btn-show" >Show</button>
+            </td>
+        </tr>
+        <tr id="4">
+            <td>4</td>
+            <td>Phuc Pham</td>
+            <td>Tam Ninh Huyen Thoai</td>
+            <td>
+                <button class="btn-show" >Show</button>
+            </td>
+        </tr>
+      </table>
+      <script>
+        $(document).ready(function(){
+            $(".btn-show").on('click',function(){
+                var currentRow=$(this).closest("tr");
+                var id=currentRow.find("td:eq(0)").html();
+                var name=currentRow.find("td:eq(1)").html();
+                var group=currentRow.find("td:eq(2)").html();
+                var data='\nID: '+id+"\nName: "+name+"\nGroup: "+group;
+                alert(data);
+                // .dialog({
+                //     resizable: false,
+                //     height:140,
+                //     modal: true,
+                //     buttons: {
+                //         "Confirm": function() {
+                //             $( this ).dialog( "close" );
+                //         },
+                //         Cancel: function() {
+                //             $( this ).dialog( "close" );
+                //         }
+                //     }
+                // });
+            });
+        });
+      </script>
+    </body>
+</html>
