@@ -7,34 +7,19 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <title>Tin-Chi</title>
       <link rel="stylesheet" href="style.css">
-      <!-- jQuery -->
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-      <script>
-        function show(){
-            var x =document.getElementById("container");
-            if(x.className==="container"){
-                x.className+="icon";
-            }
-            else{
-                x.className="container";
-            }
-        }
-      </script>
     </head>
     <body>
-        <ul class="container" id="container">
-          <li class="icon-shortage"><span style="font-size: 30px;" class="fa fa-bars fa_4x" onclick="show()"></span></li>
+        <ul class="container">
           <li><a href="#">Thông báo</a></li>
           <li><a href="#">Chương trình đào tạo</a></li>
           <li><a href="#">Kế hoạch</a></li>
-          <li class="dropdown"><a href="#">Tra cứu sinh viên</a>
-            <div class="dropdown-content">
-                <a href="#">SV đang học</a>
-                <a href="#">SV ngừng học</a>
-                <a href="#">SV bị hủy đăng ký học do chây ỳ đóng học phí</a>
-                <a href="#">SV lười học thông minh</a>
-            </div>
+          <li><a href="#">Tra cứu sinh viên</a>
+            <ul>
+              <li><a href="#">SV đang học</a></li>
+              <li><a href="#">SV ngừng học</a></li>
+              <li><a href="#">SV bị hủy đăng ký học do chây ỳ đóng học phí</a></li>
+              <li><a href="#">SV lười học thông minh</a></li>
+            </ul>
           </li>
           <li><a href="#">Quy chế & Quy định</a></li>
           <li><a href="#">Hướng dẫn</a></li>
